@@ -1,5 +1,5 @@
-import components.teachers.service as teacher
-
+import components.teachers.service as teacher_service
+import pprint
 
 # print(teacher.create_one({
 #       "name": "Тест Тест",
@@ -12,10 +12,16 @@ import components.teachers.service as teacher
 #           "phone": "+333333"
 #       }}))
 
+pprint.pprint(teacher_service.get_all())
 
-print(teacher.delete_one_by_id(4))
+pprint.pprint("--------------------------------------")
 
-# print(teacher.get_all())
+
+pprint.pprint(teacher_service.delete_one_by_id(3))
+
+pprint.pprint("--------------------------------------")
+
+pprint.pprint(teacher_service.get_all())
 
 # print(teacher.get_one_by_id(1))
 
